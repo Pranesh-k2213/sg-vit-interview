@@ -1,0 +1,23 @@
+
+// Program to test if a given number is armstrong number
+// Armstrong number is a number whose cube of digits is same as the intial number
+// Example : 371, 153
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    // Write C++ code here
+    int i;
+    cin>>i;
+    int sum = 0;
+    int temp = i;
+    while(temp > 0) {
+        sum += pow(temp % 10, 3);
+        temp = temp / 10;
+    }
+    if (sum == i) {
+        cout<<"Armstrong number"<<endl;
+    } else {
+        cout<<"Not armstrong number"<<endl;
+    }
+    return 0;
+}
